@@ -7,6 +7,7 @@
   --bg-secondary-color: #f5f4fa;
   --extra-bg-color: #2f303a;
   --card-border: #eeeeee;
+  --clients-border: #afb1b8;
 }
 
 body {
@@ -35,6 +36,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+button {
+  padding: 0;
 }
 
 .list-decor {
@@ -125,11 +130,13 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  fill: var(--text-color);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--extra-color);
+  fill: var(--extra-color);
 }
 
 .contacts {
@@ -139,6 +146,26 @@ img {
 
 .contacts .item:not(:last-child) {
   margin-right: 50px;
+}
+
+.item .contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
+
+.envelope,
+.smartphone {
+  margin-right: 10px;
 }
 
 .nav {
@@ -155,10 +182,23 @@ img {
 
 /* Герой */
 .hero {
+  max-width: 1600px;
+  height: 600px;
+
   background: var(--extra-bg-color);
   text-align: center;
 
   padding: 200px 0;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -222,6 +262,26 @@ img {
 
 .flex-qualities .item {
   flex-basis: 270px;
+}
+
+.antenna,
+.clock,
+.diagram,
+.astronaut {
+  width: 70px;
+  height: 70px;
+}
+
+.item-antenna,
+.item-clock,
+.item-diagram,
+.item-astronaut {
+  background: var(--bg-secondary-color);
+
+  border-radius: 4px;
+
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 
 /* Задачи */
@@ -296,15 +356,111 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-list {
+  display: flex;
+}
+
 .team-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 16px;
+}
+
+.social-list .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-button {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: var(--bg-primary-color);
+  fill: var(--clients-border);
+
+  cursor: pointer;
+}
+
+.social-button:hover {
+  background: var(--extra-color);
+  fill: var(--bg-primary-color);
+}
+
+/* Клиенты */
+.clients-hdr {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.clients-list {
+  display: flex;
+
+  justify-content: center;
+}
+
+.logo-div {
+  width: 170px;
+  height: 92px;
+
+  padding: 16px 32px;
+
+  margin-top: 50px;
+}
+
+.logo,
+.logo-1,
+.logo-2,
+.logo-3,
+.logo-4,
+.logo-5 {
+  width: 106px;
+  height: 60px;
+
+  fill: var(--clients-border);
+}
+
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.logo-div {
+  border: 1px solid var(--clients-border);
+  border-radius: 4px;
+}
+
+.logo-div:hover,
+.logo-div:focus,
+.logo:hover,
+.logo:focus,
+.logo-1:hover,
+.logo-1:focus,
+.logo-2:hover,
+.logo-2:focus,
+.logo-3:hover,
+.logo-3:focus,
+.logo-4:hover,
+.logo-4:focus,
+.logo-5:hover,
+.logo-5:focus {
+  border-color: var(--extra-color);
+  fill: var(--extra-color);
+}
 /* Main для portfolio.html =======================================================================*/
 
 /* Фильтр */
 .filter-projects {
-  padding: 94px;
+  padding: 94px 0;
 }
 
 .filter {
@@ -419,6 +575,64 @@ img {
 
   display: block;
   margin-bottom: 9px;
+}
+
+.social-hdr-ftr {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--bg-primary-color);
+}
+
+/* div для index.html */
+.social-ftr-index {
+  width: 206px;
+  height: 80px;
+  left: 401px;
+  top: 2751px;
+  position: absolute;
+}
+
+/* div для portfolio.html  */
+.social-ftr-portfolio {
+  width: 206px;
+  height: 80px;
+  left: 401px;
+  top: 1703px;
+  position: absolute;
+}
+
+.social-list-ftr {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.social-list-ftr .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-button-ftr {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--bg-primary-color);
+
+  cursor: pointer;
+}
+
+.social-button-ftr:hover {
+  background: var(--extra-color);
+  fill: var(--bg-primary-color);
 }
 
 .mail-ftr {
