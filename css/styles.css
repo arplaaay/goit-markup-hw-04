@@ -109,6 +109,10 @@ button {
   color: var(--extra-color);
 }
 
+.current-page {
+  color: var(--extra-color);
+}
+
 .nav-list {
   display: flex;
   margin-left: 40px;
@@ -183,12 +187,12 @@ button {
 /* Герой */
 .hero {
   max-width: 1600px;
-  height: 600px;
 
   background: var(--extra-bg-color);
   text-align: center;
 
   padding: 200px 0;
+  margin: 0 auto;
 
   background-image: linear-gradient(
       to right,
@@ -292,11 +296,11 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+
+  margin-bottom: 50px;
 }
 
 .task-list {
-  margin-top: 50px;
-
   display: flex;
 }
 
@@ -316,10 +320,8 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-}
 
-.team-list {
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .team-person-hdr {
@@ -342,7 +344,7 @@ button {
 }
 
 .item-wrapper {
-  padding: 30px 15px;
+  padding: 30px 32px;
   background: var(--bg-primary-color);
 }
 
@@ -375,7 +377,11 @@ button {
   margin-right: 10px;
 }
 
-.social-button {
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 44px;
   height: 44px;
 
@@ -388,7 +394,7 @@ button {
   cursor: pointer;
 }
 
-.social-button:hover {
+.social-link:hover {
   background: var(--extra-color);
   fill: var(--bg-primary-color);
 }
@@ -401,6 +407,8 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+
+  margin-bottom: 50px;
 }
 
 .clients-list {
@@ -409,13 +417,14 @@ button {
   justify-content: center;
 }
 
-.logo-div {
-  width: 170px;
-  height: 92px;
+.clients-list .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 16px 32px;
 
-  margin-top: 50px;
+  fill: var(--clients-border);
 }
 
 .logo,
@@ -426,36 +435,30 @@ button {
 .logo-5 {
   width: 106px;
   height: 60px;
+}
 
-  fill: var(--clients-border);
+.clients-list .item {
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--clients-border);
+  border-radius: 4px;
 }
 
 .clients-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
-.logo-div {
-  border: 1px solid var(--clients-border);
-  border-radius: 4px;
+.clients-list .item:hover,
+.clients-list .item:focus {
+  border-color: var(--extra-color);
 }
 
-.logo-div:hover,
-.logo-div:focus,
-.logo:hover,
-.logo:focus,
-.logo-1:hover,
-.logo-1:focus,
-.logo-2:hover,
-.logo-2:focus,
-.logo-3:hover,
-.logo-3:focus,
-.logo-4:hover,
-.logo-4:focus,
-.logo-5:hover,
-.logo-5:focus {
-  border-color: var(--extra-color);
+.clients-list .link:hover,
+.clients-list .link:focus {
   fill: var(--extra-color);
 }
+
 /* Main для portfolio.html =======================================================================*/
 
 /* Фильтр */
@@ -497,11 +500,17 @@ button {
   color: var(--bg-primary-color);
 }
 
+.current-filter {
+  background: var(--extra-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--bg-primary-color);
+}
+
 /* Проекты */
 .projects {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 100%;
 
   margin-left: -30px;
   margin-top: -30px;
@@ -514,9 +523,14 @@ button {
   margin-top: 30px;
 }
 
-.card-img {
+.card {
   display: block;
-  max-width: 100%;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-content {
@@ -608,7 +622,6 @@ button {
 
 .social-list-ftr {
   display: flex;
-  justify-content: center;
 
   margin-top: 20px;
 }
@@ -617,7 +630,11 @@ button {
   margin-right: 10px;
 }
 
-.social-button-ftr {
+.social-link-ftr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 44px;
   height: 44px;
 
@@ -630,7 +647,7 @@ button {
   cursor: pointer;
 }
 
-.social-button-ftr:hover {
+.social-link-ftr:hover {
   background: var(--extra-color);
   fill: var(--bg-primary-color);
 }
