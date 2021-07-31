@@ -602,24 +602,6 @@ button {
   color: var(--bg-primary-color);
 }
 
-/* div для index.html */
-.social-ftr-index {
-  width: 206px;
-  height: 80px;
-  left: 401px;
-  top: 2751px;
-  position: absolute;
-}
-
-/* div для portfolio.html  */
-.social-ftr-portfolio {
-  width: 206px;
-  height: 80px;
-  left: 401px;
-  top: 1703px;
-  position: absolute;
-}
-
 .social-list-ftr {
   display: flex;
 
@@ -670,4 +652,13 @@ button {
 
 .contacts-ftr .item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.address-div {
+  margin-right: 70px;
 }
